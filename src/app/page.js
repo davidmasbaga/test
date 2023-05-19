@@ -1,6 +1,6 @@
 async function getData() {
-    
-    const res = await fetch('api/typi');
+    const host= process.env.NEXT_PUBLIC_HOST
+    const res = await fetch(`${host}/api/typi`);
       
     // Recommendation: handle errors
     if (!res.ok) {
